@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/styles.css">        
+    </head>
+
+
+
+    <body class="body-class">
+        <div class="container">
+            <div id="movie-details">
+                <h1 class="text-center"><%=movie.title %></h1>
+                <div class="row">
+                    <div class="col-xs-5">
+                        <img class="movie-poster" src="<%=movie.poster %>" />
+                    </div>
+                    <div class="col-xs-7">
+                        <table class="table">
+                            <%for(i in movie) {
+                               if (i != ("title"&&"poster")){  // you can use this "if" for not to show title again
+                                  
+                           
+                            /*  ----------------------------------------------
+                            Repeat the following HTML structure for all key value pairs in movie object
+                            -------------------------------------------------- */ %>
+                            <tr>
+                                <td><%=i /* name of key (e.g., title) */ %></td>
+                                <td><%=movie[i] /* value (e.g., The Matrix) */ %></td>
+                            </tr>
+                            <% /*  ----------------------------------------------
+                            -------------------------------------------------- */ %>
+                            <%   }
+                                } %>
+                            
+                        </table>
+                    </div>    
+                </div>
+
+                <div class="row">
+                    <div class=buttons >
+                        <a class="btn btn-primary" href=" / ">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+

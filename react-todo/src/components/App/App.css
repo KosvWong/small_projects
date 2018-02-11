@@ -1,0 +1,18 @@
+.done {
+	text-decoration: line-through;
+	color: grey;
+	}
+	
+
+
+input {
+	border: 1px solid black;
+	width: 95%;
+}
+
+
+table, tr {
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	display: block;	
+}

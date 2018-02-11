@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <% if (movies.length === 0) { %>
+           <h1>No Movies Found</h1>
+       <% } else { %>
+           <h1>Search Result:</h1>
+           <ul>
+           <%
+            for(let i =0; i<movies.length; i++){
+            %>
+                <li><%=movies[i].title%></li>
+           <% } %>
+           <ul>
+    <%
+       }
+    %>
+    </body>
+</html>
